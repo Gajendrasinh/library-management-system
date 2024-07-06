@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "998d24ed-041b-48f1-bf93-17a792858c81",
+		"name": "Library System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25990090"
+	},
+	"item": [
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "All Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9007/api/v1/book/all"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9007/api/v1/book/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9007/api/v1/book/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\": \"Gajendrasinh Zala\",\r\n    \"title\": \"java a beginner's guide\",\r\n    \"isbn\": \"87978\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9007/api/v1/book/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Book",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"author\": \"Gajendrasinh Zala\",\r\n    \"title\": \"java a beginner's guide\",\r\n    \"isbn\": \"87978\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9007/api/v1/book/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Borrower",
+			"item": [
+				{
+					"name": "All borrower",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9007/api/v1/borrower"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Book By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9007/api/v1/borrower/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Book By ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9007/api/v1/borrower/3"
+					},
+					"response": []
+				},
+				{
+					"name": "Add Borrower",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Gajendrasinh Zala\",\r\n  \"email\": \"gajendrasinh.zala93@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9007/api/v1/borrower/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update borrower",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Gajendrasinh Zala\",\r\n  \"email\": \"gajendrasinh.zala93@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9007/api/v1/borrower/1"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Return Book",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": "http://localhost:9007/api/v1/book/return/1/borrower/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Borrow Book",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": "http://localhost:9007/api/v1/book/borrow/1/borrower/1"
+			},
+			"response": []
+		}
+	]
+}
